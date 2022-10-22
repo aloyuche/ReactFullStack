@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
+import axios from "axios";
 
 export default class App extends Component {
   constructor() {
@@ -37,13 +38,32 @@ export default class App extends Component {
       password: e.target.value,
     });
   }
+  onSubmit(e) {
+    e.preventDefault();
+
+    const registered = {
+      name: this.state.name,
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password,
+    };
+    axios
+      .post("http://localhost:5000/api/signup", registered)
+      .then((response) => console.log(response.data));
+    this.state({
+      name: "",
+      username: "",
+      email: "",
+      password: "",
+    });
+  }
 
   render() {
     return (
       <div>
         <div className="container">
           <div className="form-div">
-            <form action="">
+            <form onSubmit={this.onSubmit}>
               <input
                 type="text"
                 placeholder="Full Name"
