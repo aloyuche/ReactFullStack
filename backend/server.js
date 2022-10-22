@@ -5,8 +5,8 @@ const cors = require("cors");
 const router = require("./routes/route");
 const app = express();
 
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 app.use("/api", router);
 
 mongoose
@@ -15,7 +15,7 @@ mongoose
   .catch((error) => console.log(error));
 
 app.get("/", (req, res) => {
-  res.send("<h1>WELCOME</h1>");
+  res.send("<h1 style = 'center'>WELCOME</h1>");
 });
 
 app.listen(
