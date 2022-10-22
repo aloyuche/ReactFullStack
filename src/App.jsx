@@ -11,6 +11,10 @@ export default class App extends Component {
       email: "",
       password: "",
     };
+    this.ChangeName = this.ChangeName.bind(this);
+    this.ChangeUsername = this.ChangeUsername.bind(this);
+    this.ChangeEmail = this.ChangeEmaile.bind(this);
+    this.ChangePassword = this.ChangePassword.bind(this);
   }
 
   ChangeName(e) {
