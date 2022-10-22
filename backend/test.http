@@ -1,0 +1,9 @@
+POST http://locahost:5000/api/signup
+Content-Type: application/json
+
+{
+    "name":"Aloysius",
+    "username":"Aloynwa",
+    "email":"uche@mail.com",
+    "password":"Aloy1705"
+}
