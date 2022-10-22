@@ -50,8 +50,8 @@ export default class App extends Component {
               <input
                 type="text"
                 placeholder="Full Name"
-                onChange={this.ChangeName}
-                value={this.state.name}
+                onChange={this.ChangeUsername}
+                value={this.state.username}
                 className="form-control form-group"
               />
               <input
