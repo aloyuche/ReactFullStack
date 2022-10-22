@@ -16,30 +16,31 @@ export default class App extends Component {
     this.ChangeUsername = this.ChangeUsername.bind(this);
     this.ChangeEmail = this.ChangeEmaile.bind(this);
     this.ChangePassword = this.ChangePassword.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
-  ChangeName(e) {
+  ChangeName(event) {
     this.setState({
-      name: e.target.value,
+      name: event.target.value,
     });
   }
-  ChangeUserame(e) {
+  ChangeUserame(event) {
     this.setState({
-      username: e.target.value,
+      username: event.target.value,
     });
   }
-  ChangeEmail(e) {
+  ChangeEmail(event) {
     this.setState({
-      email: e.target.value,
+      email: event.target.value,
     });
   }
-  ChangePassword(e) {
+  ChangePassword(event) {
     this.setState({
-      password: e.target.value,
+      password: event.target.value,
     });
   }
-  onSubmit(e) {
-    e.preventDefault();
+  onSubmit(event) {
+    event.preventDefault();
 
     const registered = {
       name: this.state.name,
@@ -63,7 +64,10 @@ export default class App extends Component {
       <div>
         <div className="container">
           <div className="form-div">
-            <form onSubmit={this.onSubmit}>
+            <h1 style={{ textAlign: "center" }} className="register mt-4">
+              REGISTER HERE
+            </h1>
+            <form onSubmit={this.onSubmit} className="form-group mt-6">
               <input
                 type="text"
                 placeholder="Full Name"
@@ -71,13 +75,15 @@ export default class App extends Component {
                 value={this.state.name}
                 className="form-control form-group"
               />
+              <br />
               <input
                 type="text"
-                placeholder="Full Name"
+                placeholder="Username"
                 onChange={this.ChangeUsername}
                 value={this.state.username}
                 className="form-control form-group"
               />
+              <br />
               <input
                 type="email"
                 placeholder="Email Address"
@@ -85,6 +91,7 @@ export default class App extends Component {
                 value={this.state.email}
                 className="form-control form-group"
               />
+              <br />
               <input
                 type="password"
                 placeholder="Password"
@@ -92,10 +99,12 @@ export default class App extends Component {
                 value={this.state.password}
                 className="form-control form-group"
               />
+              <br />
+              <br />
               <input
                 type="submit"
                 value="Submit"
-                className="btn btn-danger btn-block"
+                className="btn btn-danger form-control form-group"
               />
             </form>
           </div>
