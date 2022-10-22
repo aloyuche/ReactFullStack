@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const UserSignup = require("../model/signupModel");
+const UserSignup = require("../models/userModel");
 
 router.post("/signup", (req, res) => {
   const signUpUser = new UserSignup({
