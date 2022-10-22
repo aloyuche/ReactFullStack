@@ -50,7 +50,7 @@ export default class App extends Component {
     axios
       .post("http://localhost:5000/api/signup", registered)
       .then((response) => console.log(response.data));
-    this.state({
+    this.setState({
       name: "",
       username: "",
       email: "",
