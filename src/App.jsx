@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/boostrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
 export default class App extends Component {
