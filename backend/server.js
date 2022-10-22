@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const router = require("./routes/route");
+const bcrypt = require("bcrypt");
 const app = express();
 
 app.use(express.json());
